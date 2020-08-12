@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "PageViewController"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of PageViewController."
+  spec.summary      = "PageViewController is a PageViewController that split View Controller."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  PageViewController is a PageViewController that split View Controller,your ViewController must inherit PageViewController,it had menu and childvcs
                    DESC
 
   spec.homepage     = "https://github.com/chengzongxin/PageViewController.git"
