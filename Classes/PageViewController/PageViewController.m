@@ -477,6 +477,8 @@ CGFloat const underLineAdditionW = 6;
 @end
 
 
+NSDictionary * weak_function(void)  __attribute__((weak));
+
 @implementation PageConfig
 + (instancetype)config{
     
