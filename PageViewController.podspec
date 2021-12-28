@@ -66,6 +66,6 @@ Pod::Spec.new do |spec|
   spec.exclude_files = "Classes/Exclude"
   spec.requires_arc = true
 
-  spec.dependency 'TBasicLib', '0.8.67'
+  spec.dependency 'TBasicLib', '0.8.66'
 
 end
