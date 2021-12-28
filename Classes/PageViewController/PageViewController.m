@@ -479,12 +479,23 @@ CGFloat const underLineAdditionW = 6;
 
 @implementation PageConfig
 + (instancetype)config{
+    
+    UIColor *itemNormalColor = nil;
+    UIColor *itemSelectedColor = nil;
+    if (weak_function) {
+        NSDictionary *dict = weak_function();
+        NSLog(@"%@",dict);
+        itemNormalColor = [dict objectForKey:@"itemNormalColor"];
+        itemSelectedColor = [dict objectForKey:@"itemSelectedColor"];
+    }
+    
+    
     PageConfig *config = PageConfig.new;
     config.pageMenuSize = CGSizeMake(ScreenW, 44);
     config.itemNormalFont = [UIFont systemFontOfSize:14];
     config.itemSelectedFont = [UIFont systemFontOfSize:15];
-    config.itemNormalColor = UIColor.lightGrayColor;
-    config.itemSelectedColor = UIColor.cyanColor;
+    config.itemNormalColor = itemNormalColor?: UIColor.lightGrayColor;
+    config.itemSelectedColor =itemSelectedColor ?: UIColor.cyanColor;
     config.itemGradientsAnimate = YES;
     config.trackerWidthAdditional = 6;
     config.trackerWidth = 0;
